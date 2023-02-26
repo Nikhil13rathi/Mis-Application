@@ -15,4 +15,10 @@ public interface DepartmentService {
 
 	public Department fetchDepartmentByAddress(String departmentAddress);
 
+	public void deleteDepartmentById(Long departmentId);
+
+	public Department updateDepartment(Long departmentId, Department department);
+
+//	public Department updateDepartment(Long departmentId, Department department);
+
 }

@@ -13,59 +13,72 @@ public class Department {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long DepartmentId;
-	private String nameString;
+	private String departmentName;
 	private String departmentAddress;
 	private String departmentCode;
-
+	
+	
 	public Department() {
 		super();
 	}
 
-	public Department(long departmentId, String nameString, String address, String departmentCode) {
+
+	public Department(long departmentId, String departmentName, String departmentAddress, String departmentCode) {
 		super();
 		DepartmentId = departmentId;
-		this.nameString = nameString;
-		this.departmentAddress = address;
+		this.departmentName = departmentName;
+		this.departmentAddress = departmentAddress;
 		this.departmentCode = departmentCode;
 	}
+
 
 	public long getDepartmentId() {
 		return DepartmentId;
 	}
 
+
 	public void setDepartmentId(long departmentId) {
 		DepartmentId = departmentId;
 	}
 
-	public String getNameString() {
-		return nameString;
+
+	public String getDepartmentName() {
+		return departmentName;
 	}
 
-	public void setNameString(String nameString) {
-		this.nameString = nameString;
+
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
 	}
 
-	public String getAddress() {
+
+	public String getDepartmentAddress() {
 		return departmentAddress;
 	}
 
-	public void setAddress(String address) {
-		departmentAddress = address;
+
+	public void setDepartmentAddress(String departmentAddress) {
+		this.departmentAddress = departmentAddress;
 	}
+
 
 	public String getDepartmentCode() {
 		return departmentCode;
 	}
 
+
 	public void setDepartmentCode(String departmentCode) {
 		this.departmentCode = departmentCode;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Department [DepartmentId=" + DepartmentId + ", nameString=" + nameString + ", departmentAddress="
-				+ departmentAddress + ", departmentCode=" + departmentCode + "]";
+		return "Department [DepartmentId=" + DepartmentId + ", departmentName=" + departmentName
+				+ ", departmentAddress=" + departmentAddress + ", departmentCode=" + departmentCode + "]";
 	}
+
+	
 
 	
 	
